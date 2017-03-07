@@ -20,7 +20,7 @@ app.get('/internallogin', function (req, res) {
     var theUrl = url.parse(req.url);
     var queryObj = queryString.parse(theUrl.query);    
     var password = queryObj.password;
-    var username = queryObj.username;
+    var username = queryObj.username; 
 
 
 });
