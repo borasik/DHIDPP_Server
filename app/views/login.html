@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class='container'>
+        
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <span id="lblResponse"></span>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <div class="checkbox">
+                <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+            </div>
+            <button onclick="onLogin()" class="btn btn-lg btn-primary btn-block" type="button">Sign in</button>
+       
+    </div>
+</body>
+<script>
+function onLogin(){
+    $.ajax({
+        type: 'GET',
+        url: "http://localhost:8081/internallogin",
+        data: {password: "10221022", username: "boras"},        
+        contentType: "application/json",
+        success: function (data) {
+            
+        },
+        error: function (xhr, status, error) {            
+            $('#lblResponse').html('Error connecting to the server.');
+        }
+    });
+}
+</script>
+
+</html>
