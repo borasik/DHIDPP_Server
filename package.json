@@ -1,0 +1,24 @@
+{
+  "name": "dhidppserver-on-azure",
+  "version": "1.0.0",
+  "description": "alex borsuk azure idpp",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borasik/DHIDPP_Server.git"
+  },
+  "author": "alex borsuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borasik/DHIDPP_Server/issues"
+  },
+  "homepage": "https://github.com/borasik/DHIDPP_Server#readme"
+}
