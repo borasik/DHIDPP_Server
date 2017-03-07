@@ -25,6 +25,10 @@ app.get('/internallogin', function (req, res) {
 
 });
 
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
 app.get('/login', function (req, res) {
 
     var response = {
